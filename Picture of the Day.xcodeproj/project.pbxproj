@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71379482122C49600229E72 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71379472122C49600229E72 /* Reachability.swift */; };
+		B71DD6F02119884B006EE8BB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71DD6EF2119884B006EE8BB /* main.swift */; };
+		B792251F2115D02C00C71E4C /* BingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B792251E2115D02C00C71E4C /* BingProvider.swift */; };
+		B7A518DC21183AA800B83640 /* DesktopImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A518DB21183AA800B83640 /* DesktopImageManager.swift */; };
 		B7BCE413211457430057BF4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BCE412211457430057BF4B /* AppDelegate.swift */; };
 		B7BCE415211457440057BF4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE414211457440057BF4B /* Assets.xcassets */; };
-		B7BCE418211457440057BF4B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7BCE416211457440057BF4B /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B71379472122C49600229E72 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B71DD6EF2119884B006EE8BB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B792251E2115D02C00C71E4C /* BingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BingProvider.swift; sourceTree = "<group>"; };
+		B79225202115DA0600C71E4C /* Picture of the Day.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Picture of the Day.entitlements"; sourceTree = "<group>"; };
+		B7A518DB21183AA800B83640 /* DesktopImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopImageManager.swift; sourceTree = "<group>"; };
 		B7BCE40F211457430057BF4B /* Picture of the Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picture of the Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7BCE412211457430057BF4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7BCE414211457440057BF4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B7BCE417211457440057BF4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B7BCE419211457440057BF4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7BCE41A211457440057BF4B /* Picture_of_the_Day.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Picture_of_the_Day.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,11 +57,14 @@
 		B7BCE411211457430057BF4B /* Picture of the Day */ = {
 			isa = PBXGroup;
 			children = (
+				B79225202115DA0600C71E4C /* Picture of the Day.entitlements */,
+				B7A518DB21183AA800B83640 /* DesktopImageManager.swift */,
+				B792251E2115D02C00C71E4C /* BingProvider.swift */,
 				B7BCE412211457430057BF4B /* AppDelegate.swift */,
 				B7BCE414211457440057BF4B /* Assets.xcassets */,
-				B7BCE416211457440057BF4B /* MainMenu.xib */,
 				B7BCE419211457440057BF4B /* Info.plist */,
-				B7BCE41A211457440057BF4B /* Picture_of_the_Day.entitlements */,
+				B71DD6EF2119884B006EE8BB /* main.swift */,
+				B71379472122C49600229E72 /* Reachability.swift */,
 			);
 			path = "Picture of the Day";
 			sourceTree = "<group>";
@@ -92,6 +101,11 @@
 				TargetAttributes = {
 					B7BCE40E211457420057BF4B = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -119,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7BCE415211457440057BF4B /* Assets.xcassets in Resources */,
-				B7BCE418211457440057BF4B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,22 +143,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7A518DC21183AA800B83640 /* DesktopImageManager.swift in Sources */,
+				B792251F2115D02C00C71E4C /* BingProvider.swift in Sources */,
+				B71DD6F02119884B006EE8BB /* main.swift in Sources */,
+				B71379482122C49600229E72 /* Reachability.swift in Sources */,
 				B7BCE413211457430057BF4B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B7BCE416211457440057BF4B /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B7BCE417211457440057BF4B /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B7BCE41B211457440057BF4B /* Debug */ = {
@@ -265,7 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Picture of the Day/Picture_of_the_Day.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Picture of the Day/Picture of the Day.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 686L395P8C;
@@ -274,7 +280,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.obyknovenius.pod.Picture-of-the-Day";
+				PRODUCT_BUNDLE_IDENTIFIER = com.obyknovenius.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -284,7 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Picture of the Day/Picture_of_the_Day.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Picture of the Day/Picture of the Day.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 686L395P8C;
@@ -293,7 +299,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.obyknovenius.pod.Picture-of-the-Day";
+				PRODUCT_BUNDLE_IDENTIFIER = com.obyknovenius.pod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
